@@ -4,9 +4,41 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./index.css">
 	<title>Document</title>
 </head>
 <body>
-
+	<div class="wrapper">
+		<div class="banner">
+			<h1>webscoket聊天室</h1>
+			<span id="status"></span>
+		</div>
+		<div id="historyMsg">
+		</div>
+		<div class="controls" >
+			<div class="items">
+				<input id="colorStyle" type="color" placeHolder='#000' title="font color" />
+				<input id="emoji" type="button" value="emoji" title="emoji" />
+				<label for="sendImage" class="imageLable">
+					<input type="button" value="image"  />
+					<input id="sendImage" type="file" value="image"/>
+				</label>
+				<input id="clearBtn" type="button" value="clear" title="clear screen" />
+			</div>
+			<textarea id="messageInput" placeHolder="enter to send"></textarea>
+			<input id="sendBtn" type="button" value="SEND">
+			<div id="emojiWrapper">
+			</div>
+		</div>
+	</div>
+	<div id="loginWrapper">
+		<p id="info">connecting to server...</p>
+		<div id="nickWrapper">
+			<input type="text" placeHolder="nickname" id="nicknameInput" />
+			<input type="button" value="OK" id="loginBtn" />
+		</div>
+	</div>
+	<script src="https://cdn.bootcss.com/socket.io/2.1.0/socket.io.js"></script>
+	<script src="./index.js"></script>
 </body>
 </html>
