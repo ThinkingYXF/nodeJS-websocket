@@ -5,37 +5,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" href="./index.css">
-	<title>Document</title>
+	<title>websocket</title>
 </head>
 <body>
 	<div class="wrapper">
 		<div class="banner">
 			<h1>webscoket聊天室</h1>
-			<span id="status"></span>
+			在线人数:<span id="status"></span>
 		</div>
 		<div id="historyMsg">
 		</div>
 		<div class="controls" >
 			<div class="items">
 				<input id="colorStyle" type="color" placeHolder='#000' title="font color" />
-				<input id="emoji" type="button" value="emoji" title="emoji" />
+				<!-- <input id="emoji" type="button" value="emoji" title="emoji" />
 				<label for="sendImage" class="imageLable">
 					<input type="button" value="image"  />
 					<input id="sendImage" type="file" value="image"/>
 				</label>
-				<input id="clearBtn" type="button" value="clear" title="clear screen" />
+				<input id="clearBtn" type="button" value="clear" title="clear screen" /> -->
 			</div>
-			<textarea id="messageInput" placeHolder="enter to send"></textarea>
-			<input id="sendBtn" type="button" value="SEND">
+			<textarea id="messageInput" placeHolder="content"></textarea>
+			<input id="sendBtn" type="button" value="发送">
 			<div id="emojiWrapper">
 			</div>
 		</div>
 	</div>
 	<div id="loginWrapper">
-		<p id="info">connecting to server...</p>
+		<p id="info">连接中...</p>
 		<div id="nickWrapper">
-			<input type="text" placeHolder="nickname" id="nicknameInput" />
-			<input type="button" value="OK" id="loginBtn" />
+			<input type="text" placeHolder="请输入昵称" id="nicknameInput" />
+			<input type="button" value="登录" id="loginBtn" />
 		</div>
 	</div>
 	<script src="https://cdn.bootcss.com/socket.io/2.1.0/socket.io.js"></script>

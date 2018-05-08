@@ -44,6 +44,9 @@ html, body {
     overflow: auto;
     padding: 2px;
 }
+#historyMsg > p.mine{
+    text-align: right;
+}
 #historyMsg img {
     max-width: 99%;
 }

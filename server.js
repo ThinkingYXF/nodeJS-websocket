@@ -23,13 +23,18 @@ io.on('connection', function(socket) {
 	});
 	//断开连接的事件
 	socket.on('disconnect', function() {
+		if(users.length <= 0){
+			console.log('no one online!');
+			return false;
+		}
 		//将断开连接的用户从users中删除
 		users.splice(socket.userIndex, 1);
 		//通知除自己以外的所有人
 		socket.broadcast.emit('system', socket.nickname, users.length, 'logout');
 	});
 	//收到消息
-	socket.on('postMsg',function(msg){
-		socket.broadcast.emit('newMsg', socket.nickname, msg);
+	socket.on('postMsg',function(msg, color, type){
+		color = color || '#000';
+		socket.broadcast.emit('newMsg', socket.nickname, msg, color, type);
 	});
 });
